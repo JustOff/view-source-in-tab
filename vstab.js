@@ -9,12 +9,12 @@ var vstabClass =
 		var proto = uri.scheme;
 
 		if (proto != "view-source") {
-			openUILinkIn("view-source:"+uri.spec, "tab");
+			openUILinkIn("view-source:"+uri.spec, "tab", {relatedToCurrent: true});
 		}
 	},
 
 	BrowserViewSourceOfDocument: function (aDocument)
 	{
-		openUILinkIn("view-source:"+aDocument.location.href, "tab");
+		openUILinkIn("view-source:"+aDocument.location.href, "tab", {relatedToCurrent: true});
 	}
 };
